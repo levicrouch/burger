@@ -51,6 +51,7 @@ var orm = {
         });
     },
     create: function (table, cols, vals, cb) {
+        console.log(cols);
         var queryString = "INSERT INTO " + table;
 
         queryString += " (";
@@ -61,6 +62,7 @@ var orm = {
         queryString += ") ";
 
         console.log(queryString);
+        console.log(vals);
 
         connection.query(queryString, vals, function (err, result) {
             if (err) {
