@@ -23,8 +23,7 @@ router.get("/api/burgers/all", function (req, res) {
       burgers: data
     };
     // console.log(hbsObject);
-    // res.json(hbsObject);
-    res.render("index", hbsObject)
+    res.json(hbsObject);
   });
 });
 
